@@ -78,7 +78,7 @@ Benchmarked across 720 hours of live AWS EC2 market feeds and 2,243 steps of rea
 ### 3. Quick Start
 ```
 # Clone the repository
-git clone [https://github.com/](https://github.com/)<your-username>/cloud-stackelberg.git
+git clone [https://github.com/][(https://github.com/)shaazil/PRISM.git]
 cd cloud-stackelberg
 
 # Install dependencies
