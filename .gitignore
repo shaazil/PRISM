@@ -1,0 +1,18 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+.venv/
+env/
+*.env
+
+# macOS system files
+.DS_Store
+
+# Intermediate output traces & caches
+aws_mock_history.csv
+aws_live_spot_data.csv
+*.csv.tmp
