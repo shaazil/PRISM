@@ -16,3 +16,6 @@ env/
 aws_mock_history.csv
 aws_live_spot_data.csv
 *.csv.tmp
+
+# Generated figures (re-generate with: python -m experiments.run_benchmarks)
+figures/*.png
