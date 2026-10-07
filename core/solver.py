@@ -17,10 +17,11 @@ def leader_utility(alpha, theta, w_t, eta, r_bar, c_od, c_sp, c_r, rho, D_tot, a
 
 def solve_stackelberg(theta, w_t, eta, r_bar, c_od, c_sp, c_r, rho, D_tot, alpha_prev=0.0, delta=0.0, a_max=1.0):
     """Global leader optimum via the finite candidate set, now including migration kinks."""
+    safe_denom = np.maximum(w_t * eta, 1e-300)
     S = c_od - c_sp - rho * c_r                 
     m = D_tot * eta
-    lo = 1.0 / (w_t * eta * (1 + r_bar))        
-    hi = 1.0 / (w_t * eta)                      
+    lo = 1.0 / (safe_denom* (1 + r_bar))        
+    hi = 1.0 / safe_denom                      
     
     # add alpha_prev to the candidate breakpoints because the absolute 
     # value in the switching penalty creates a mathematical "kink" exactly at this point.
